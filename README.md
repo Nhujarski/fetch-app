@@ -13,3 +13,7 @@ A web application to help dog lovers search shelter dogs with the hope of findin
 </ul>
 <p>Users should be able to select their favorite dogs from the search results. When finished searching, they should be able to generate a match based on dogs added to the favorites list. 
 </p>
+
+## How to run
+
+<p> run npm install then npm run dev</p>

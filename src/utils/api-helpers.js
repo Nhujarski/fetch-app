@@ -1,4 +1,4 @@
-export const Login = async () => {
+export const Login = async (name, email) => {
   const url = 'https://frontend-take-home-service.fetch.com/auth/login';
   const options = {
     method: 'POST',
@@ -7,8 +7,8 @@ export const Login = async () => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      name: 'Nick', // ✅ Double-check if this should be "username"
-      email: 'nhujarski@gmail.com',
+      name: name, // ✅ Double-check if this should be "username"
+      email: email,
     }),
   };
   try {
@@ -19,8 +19,8 @@ export const Login = async () => {
     }
 
     const contentType = resp.headers.get('content-type');
-
-    console.log(resp.status);
+    console.log('response status >>>:', resp.status);
+    return resp.status;
   } catch (error) {
     console.error('Error:', error);
   }

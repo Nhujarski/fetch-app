@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -11,6 +11,19 @@ import TextField from '@mui/material/TextField';
 import { Login } from '../../utils/api-helpers';
 
 const LoginSignin = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const logInHelper = async () => {
+    let status = await Login(name, email);
+    if (status === 200) {
+      console.log('user logged in: ', name);
+      setName('');
+      setEmail('');
+    } else {
+      console.log('Oops, something went wrong. Please try to log in again');
+    }
+  };
   return (
     <Card variant='outlined' sx={{ maxWidth: 500 }}>
       <CardHeader
@@ -25,11 +38,21 @@ const LoginSignin = () => {
       />
 
       <CardContent>
-        <TextField required label='Name' />
-        <TextField required label='Email' />
+        <TextField
+          required
+          label='Name'
+          onChange={(e) => setName(e.target.value)}
+          value={name}
+        />
+        <TextField
+          required
+          label='Email'
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+        />
       </CardContent>
       <CardActions>
-        <Button variant='contained' onClick={Login}>
+        <Button variant='contained' onClick={logInHelper}>
           Log In
         </Button>
       </CardActions>

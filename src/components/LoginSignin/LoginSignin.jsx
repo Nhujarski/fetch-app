@@ -7,12 +7,13 @@ import CardActions from '@mui/material/CardActions';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-
+import { useNavigate } from 'react-router';
 import { Login } from '../../utils/api-helpers';
 
 const LoginSignin = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
 
   const logInHelper = async () => {
     let status = await Login(name, email);
@@ -20,6 +21,7 @@ const LoginSignin = () => {
       console.log('user logged in: ', name);
       setName('');
       setEmail('');
+      navigate('/test');
     } else {
       console.log('Oops, something went wrong. Please try to log in again');
     }

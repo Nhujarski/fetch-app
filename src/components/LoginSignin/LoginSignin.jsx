@@ -21,7 +21,7 @@ const LoginSignin = () => {
       console.log('user logged in: ', name);
       setName('');
       setEmail('');
-      navigate('/test');
+      navigate('/search');
     } else {
       console.log('Oops, something went wrong. Please try to log in again');
     }

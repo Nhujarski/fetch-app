@@ -1,0 +1,8 @@
+.search-layout-container {
+    min-width: 500px;
+    place-items: center;
+}
+
+.searchInputContainer {
+    border: 5px solid red;
+}

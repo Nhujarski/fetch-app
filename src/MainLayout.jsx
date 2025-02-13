@@ -1,5 +1,6 @@
 import './MainLayout.css';
 import LoginSignin from './components/LoginSignin/LoginSignin';
+import SearchLayout from './components/SearchLayout/SearchLayout';
 import { BrowserRouter, Routes, Route } from 'react-router';
 
 function MainLayout() {
@@ -9,7 +10,7 @@ function MainLayout() {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<LoginSignin />} />
-            <Route path='test' element={<p>The route works!</p>} />
+            <Route path='search' element={<SearchLayout />} />
           </Routes>
         </BrowserRouter>
       </div>

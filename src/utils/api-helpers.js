@@ -47,3 +47,25 @@ export const getDogs = async () => {
     console.error('Error:', error);
   }
 };
+
+export const logout = async () => {
+  const url = 'https://frontend-take-home-service.fetch.com/auth/logout';
+  const options = {
+    method: 'POST',
+    credentials: 'include', // ✅ Ensures cookies/auth headers are included
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+  try {
+    const response = await fetch(url, options);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${resp.status}`);
+    }
+
+    return response.status;
+    // return data;
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};

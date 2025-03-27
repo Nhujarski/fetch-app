@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-const SearchBar = () => {
+const SearchDogs = () => {
   return (
     <Card>
       <CardContent>
@@ -15,4 +15,4 @@ const SearchBar = () => {
   );
 };
 
-export default SearchBar;
+export default SearchDogs;

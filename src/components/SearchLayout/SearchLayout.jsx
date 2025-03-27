@@ -4,7 +4,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import SearchBar from '../SearchBar/SearchBar.jsx';
+import SearchDogs from '../SearchDogs/SearchDogs.jsx';
 
 import { logout } from '../../utils/api-helpers.js';
 import { useNavigate } from 'react-router';
@@ -32,7 +32,7 @@ const SearchLayout = () => {
           </Button>
         </Toolbar>
       </AppBar>
-      <SearchBar />
+      <SearchDogs />
     </div>
   );
 };

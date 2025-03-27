@@ -6,10 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
-import TextField from '@mui/material/TextField';
+import SearchBar from '../SearchBar/SearchBar.jsx';
 
 import './SearchLayout.css';
 
@@ -24,12 +21,7 @@ const SearchLayout = () => {
           <Button color='inherit'>Log out</Button>
         </Toolbar>
       </AppBar>
-      <Card>
-        <CardContent>
-          <TextField required label='Search' sx={{ minWidth: 100 }} />
-          <Button variant='contained'>Search</Button>
-        </CardContent>
-      </Card>
+      <SearchBar />
     </div>
   );
 };
